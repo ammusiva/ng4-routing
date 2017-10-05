@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+//import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 // import 'hammerjs';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
@@ -21,6 +21,8 @@ import { FooterComponent } from './component/footer/footer.component';
 
 import { DataService } from './service/data.service';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { AbbrNumberPipe } from './abbr-number.pipe';
+import { ZoomDirective } from './directive/zoom.directive';
 
 @NgModule({
   declarations: [
@@ -34,17 +36,19 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
+    AbbrNumberPipe,
+    ZoomDirective,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdMenuModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdIconModule,
+    // MdButtonModule,
+    // MdMenuModule,
+    // MdCardModule,
+    // MdToolbarModule,
+    // MdIconModule,
      Ng2SmartTableModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },

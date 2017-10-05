@@ -12,9 +12,22 @@
 </div>
 
 <h1>
+
+  
     home works!
   </h1>
+<h1>{{1234 | currency:'INR'}}</h1>
+<pre>
+{{result |json}}
+</pre>
 
+<h1>{{2000| abbrNumber}}</h1>
+
+<ul>
+  <li *ngFor="let us of result">
+    <img [src]=us.thumbnailUrl >
+  </li>
+</ul>
 <!-- <display: inline  : will take width, 
 default
 block will not take width,

@@ -1,4 +1,6 @@
 import { Component, OnInit , ViewEncapsulation} from '@angular/core';
+import { DataService } from '../../service/data.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,10 +9,16 @@ import { Component, OnInit , ViewEncapsulation} from '@angular/core';
   encapsulation:ViewEncapsulation.Native
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+result;
+  constructor(
+    private service : DataService
+  ) {
+    
   }
-
+  ngOnInit(){
+    this.service.get().subscribe((res) => {
+      this.result = res.json();
+      console.log(this.result);
+    })
+  }
 }

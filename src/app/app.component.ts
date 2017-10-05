@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.service.get().subscribe((res) => {
       this.result = res.json();
-      console.log(this.result);
+     // console.log(this.result);
     })
   }
 
