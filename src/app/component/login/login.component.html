@@ -1,0 +1,25 @@
+<!-- <form #login="ngForm" (ngSubmit)="submit(email, password)">
+  
+  <div class="form-group" [ngClass]="{'has-error' : (emailRef.invalid && emailRef.touched)}">
+    <label class="control-label" for="exampleInputEmail1">Email address</label>
+    <input #emailRef="ngModel" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required [(ngModel)]="email" name="emailAddress" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <span *ngIf="emailRef.invalid && emailRef.touched" class="help-block">Please enter valid email address</span>
+  </div>
+
+  <div class="form-group" [ngClass]="{'has-error' : (passwordRef.invalid && passwordRef.touched)}">
+    <label class="control-label" for="exampleInputPassword1">Password</label>
+    <input #passwordRef="ngModel" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" [(ngModel)]="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <span *ngIf="passwordRef.invalid && passwordRef.touched" class="help-block">Please enter valid password</span>
+  </div>
+  
+  <button type="submit" routerLink="/register" class="btn btn-default">Read</button>
+  <button [disabled]="login.invalid" type="submit" routerLink="/about" class="btn btn-default">Submit</button>
+</form> -->
+
+<form #login="ngForm" (ngSubmit)="submit(email,password)" >
+  <div class="form-group" [ngClass]="{'hasError':(emailRef.invalid && emailRef.touched)}">
+    <input #emailRef="ngModel" type="email" id="emailEx" name="emailEx" [(ngModel)]="email" placeholder="Enter email address">
+    <span *ngIf="emailRef.invalid && emailRef.touched" class="help-block">Please enter valid email address</span>
+  </div>
+
+</form>
