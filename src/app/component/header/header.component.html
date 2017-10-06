@@ -17,17 +17,20 @@
     home works!
   </h1>
 <h1>{{1234 | currency:'INR'}}</h1>
-<pre>
+<!-- <pre>
 {{result |json}}
-</pre>
+</pre> -->
 
 <h1>{{2000| abbrNumber}}</h1>
 
-<ul>
+<!-- <ul>
   <li *ngFor="let us of result">
-    <img [src]=us.thumbnailUrl >
+    <img [src]=us.thumbnailUrl appZoom (mouseover)="abc(event)" (mouseout)="def(event)" >
   </li>
-</ul>
+</ul> -->
+<h1 [appZoom]="'blue'" >Welcome to the custom directive</h1>
+<button [appZoom]="'blue'" >Tst</button>
+<!-- //(mouseHover)="abc(event)" (mouseLeave)="def(event)" -->
 <!-- <display: inline  : will take width, 
 default
 block will not take width,

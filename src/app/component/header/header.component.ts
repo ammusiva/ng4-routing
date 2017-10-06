@@ -5,8 +5,8 @@ import { DataService } from '../../service/data.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
-  encapsulation:ViewEncapsulation.Native
+  styleUrls: ['./header.component.css']
+ // encapsulation:ViewEncapsulation.Native
 })
 export class HeaderComponent implements OnInit {
 result;
